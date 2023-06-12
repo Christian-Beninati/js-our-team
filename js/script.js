@@ -1,5 +1,8 @@
 console.log('JS OK')
 
+// Recupero l'elemento del DOM 
+const teamList = document.getElementById('team-list');
+
 // Creo l'array di oggetti
  const teamsData = [
  {
@@ -40,4 +43,21 @@ for (let member of teamsData) {
    console.log('Position:', member.position);
    console.log('Photo:', member.photo);
    console.log('--------------------------------');
- }
+}
+
+//  Preparo una variabile con la list vuota (che conterrà le stringhe HTML)
+let list = '';
+
+// Itero attraverso l'array e costruisco le stringhe HTML
+for (let member of teamsData) {
+   list += `
+     <li>
+       <p>Name: ${member.name}</p>
+       <p>Position: ${member.position}</p>
+       <p>Photo: ${member.photo}</p>
+     </li>
+   `;
+}
+ 
+// Inserisco le stringhe HTML nell'elemnto del DOM
+teamList.innerHTML = list;
