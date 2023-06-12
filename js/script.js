@@ -51,11 +51,13 @@ let list = '';
 // Itero attraverso l'array e costruisco le stringhe HTML
 for (let member of teamsData) {
    list += `
-     <li>
-       <p>Name: ${member.name}</p>
-       <p>Position: ${member.position}</p>
-       <img src="${member.photo}" alt="${member.name}">
-     </li>
+   <li class="card">
+    <img src="${member.photo}" class=" img-fluid card-img-top " alt="${member.name}">
+    <div class="card-body">
+       <h5 class="card-title">${member.name}</h5>
+       <p class="card-text">${member.position}</p>
+    </div>
+   </li>
    `;
 }
  
