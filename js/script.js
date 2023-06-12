@@ -1,7 +1,7 @@
 console.log('JS OK')
 
 // Creo l'array di oggetti
- const teamData = [
+ const teamsData = [
  {
     name: 'Wayne Barnett',
     position: 'Founder & CEO' ,
@@ -35,7 +35,7 @@ console.log('JS OK')
 ];
 
 // Itero attraverso l'array e stampo le informazioni in console
-for (const member of teamData) {
+for (let member of teamsData) {
    console.log('Name:', member.name);
    console.log('Position:', member.position);
    console.log('Photo:', member.photo);
